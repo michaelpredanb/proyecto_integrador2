@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+    <style>
+        .imagen-verde {
+            filter: grayscale(100%) invert(0%) sepia(0%) saturate(500%) hue-rotate(120deg);
+        }
+        .nav-link {
+    
+    color: white;
+    transition: all 0.3s;
+}
+.nav-link:hover {
+   
+    border-bottom: 2px solid rgb(253, 253, 253);
+}
+header {
+      background-color: #262626;
+      color: #fff;
+      padding: 10px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      transition: background-color 0.3s;
+      height: 90px;
+      transition: background-color 0.7s;
+    }
+   #navegacion {
+    background-color: transparent;
+    height: 80px;
+   }
+   .nav-link {
+    
+    color: white;
+    transition: all 0.3s;
+}
+.nav-link:hover {
+   
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+.filtro-amarillo {
+    filter: grayscale(50%) invert(0%) sepia(0%) saturate(500%) hue-rotate(1000deg);
+        }
+
+        .filtro-celeste {
+            filter: grayscale(50%) invert(0%) sepia(0%) saturate(400%) hue-rotate(800deg);
+        }
+
+        .filtro-azul {
+            filter: grayscale(80%) invert(5%) sepia(0%) saturate(700%) hue-rotate(120deg);
+        }
+
+        .filtro-rojo {
+            filter: grayscale(50%) invert(0%) sepia(0%) saturate(300%) hue-rotate(240deg);
+
+
+        }
+
+        .filtro-verde {
+            filter: saturate(200%)
+        }
+        .filtro-gris {
+            filter: grayscale(100%) invert(0%) sepia(0%) saturate(200%) hue-rotate(240deg);
+        }
+        .filtro-morado {
+          filter: grayscale(50%) invert(0%) sepia(0%) saturate(800%) hue-rotate(500deg);   }
+        .filtro-negro {
+            filter: grayscale(50%) invert(0%) sepia(0%) saturate(800%) hue-rotate(500deg) drop-shadow(10000);
+        }
+        
+        .btndefault{
+    background-color: transparent;
+   margin-top: 250px;
+    border-radius: 5px;
+    color: white;
+    font-weight: lighter;
+    height: 50px;
+    width: 400px;
+    border: 2px solid white;
+    margin-left: 0px;
+  font-weight: lighter;
+    font-size: 17px;
+}
+.icon:hover {
+scale: 1.1;
+transition: all 0.5s;
+}
+@media (min-width: 767px) {
+#main{translate: 0px 150px;
+}
+#amarillo {
+    margin-left: 500px; margin-top: 200px;
+  }
+  #celeste {
+    margin-left: 60px; margin-top: 200px;
+  }
+  #azul {
+    margin-left: 60px; margin-top: 200px;
+  }
+  #rojo {
+    margin-left: 60px; margin-top: 200px;
+  }
+  #morado {
+    margin-left: 60px; margin-top: 200px;
+  }
+  #verde {
+    margin-left: 60px; margin-top: 200px;
+  }
+  #gris {
+    margin-left: 60px; margin-top: 200px;
+  }
+  #colores {
+    translate: -30px -650px;
+  }
+
+}
+@media (max-width: 767px) {
+ #menuicon2 {
+  translate: -1000px;}
+  #main {
+scale: 0.4;
+translate: -150px -330px;
+ }
+ #btn3 {
+translate: 0px 0px;
+ }
+ #txt1 {
+  margin-top: 100px;
+ }
+ #colores {
+  translate: 450px -485px;
+ }
+ .color {
+  margin-right: 30px;
+ }
+ #txt {
+  width: 500px;
+  translate: 600px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+ }
+ }
+ 
+ 
+ body{
+  overflow-x: hidden;
+  height: 0px;
+ }
+     
+.nav-link {
+    
+    color: white;
+    transition: all 0.3s;
+   margin-left: 10px;
+   width: 10%;
+}
+
+.nav-link:hover {
+   width: 100%;
+    border-bottom: 1.5px solid rgb(255, 255, 255);
+}
+    </style>
+
+    <title>Personalización de vehículo</title>
+</head>
+<body>
+<header id="cabezera" style="position: fixed; width: 100%; z-index: 1;">
+    <nav id="navegacion" class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <button id="btnatraz" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <img id="menuicon" src="atraz1.png" data-toggle="modal" data-target="#listaUsuariosModal"  alt="" height="30" width="50" style="background-color: transparent; translate: 0px -10px;  transition: height 0.3s ease;">
+  
+        </button>
+      
+      <a class="navbar-brand" href="#"><img src="logopng.png" alt="nada" height="70" width="150"></a>
+      <button id="homebtn" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <img id="menuicon" src="userimg.png"  alt="" height="30" width="30" style="background-color: transparent; translate: 0px -10px;  transition: height 0.3s ease;">
+
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link text-white" aria-current="page" href="proyecto_integrador_catalogo.html">Catálogo</a>
+          </li>
+          <li class="nav-item">
+            <div class="amarillo"><a class="nav-link text-white" href="#">Descuentos</a></div>
+          </li>
+          <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Contacto
+                </a>
+                <ul class="dropdown-menu text-white">
+                  <li><a class="dropdown-item text-white" href="#">Action</a></li>
+                  <li><a class="dropdown-item text-white" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider text-white"></li>
+                  <li><class="dropdown-item text-white href="pagina_administrativa.html">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a a style="width: 100%;" class="nav-link text-white" href="pagina_administrativa.html">Página administrativa</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+
+                <li><a class="dropdown-item text-white">User <div class="text-black" style="color: transparent;">.</div></a></li>
+             
+<button type="button" class="btn bg-transparent" style="translate: -70px -40px; " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  <img style="background-color: transparent;" id="img_logo" src="userimg.png" alt="" height="25" width="25">
+</button>
+
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="login">
+    <div class="modal-content">
+     
+      <div class="modal-body">
+        
+
+        <div class="login-container">
+          <div class="buttons">
+           
+          <button type="button" class="btn btn-secondary" id="btn_close" data-bs-dismiss="modal">X</button>
+
+        </div>
+          <div class="login-title">Iniciar Sesión</div>
+       
+          <div class="container_img">
+          <img class="login-image" src="logo.jpg" alt="Logo">
+        </div>
+          <form>
+              <label for="username">Usuario:</label>
+              
+              <input type="text" name="username" class="login-input" required>
+  
+              <label for="password">Contraseña:</label>
+              <input type="password" name="password" class="login-input" required>
+  
+              <button type="submit" class="login-button" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Iniciar Sesión</button>
+          </form>
+          <div class="login-links">
+            <label for="username">Olvidaste tu contraseña?</label>
+              <a href="olvidar_contraseña.html">Recuperar</a><br> 
+              <label for="username">No tienes una cuenta?</label>
+              <a href="registrarse.html">Regístrate</a>
+          </div>
+      </div>
+
+
+      </div>
+     
+    </div>
+  </div>
+</div>
+</div>             
+            </form>
+          </div>
+        </div>
+      </nav>
+  </header>
+ 
+ <main id="main">
+    
+<div id="txt" style="font-size: 40px; text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Personalización del vehículo</div>
+<img src="camara-360.png" height="50px" width="60px" style="translate: 800px 0px;" alt="">
+<div style="display: flex;">
+<div>
+<input type="range" id="slider" name="slider" min="0" max="100" value="50" style="width: 200px; rotate: 270deg; translate: 50px 140px;">
+<div style="translate: 70px -20px; font-size: 20px; width: 200px;">Seleccione la altura</div>
+<div style="translate: 160px 180px; width: 100px;">5mm</div>
+<div style="translate: 160px -30px; width: 100px;">250mm</div>
+<button  class="btndefault" style="background-color: #262626; translate: 40px -60px; height: 50px; width: 250px;">Confirmar</button>
+</div>
+<div style="translate: 180px 50px; display: flex; cursor: pointer;">
+    <div style="cursor: pointer; overflow: hidden; height: 80px; width: 180px; border: #262626 solid 2px; margin-left: 20px;" onclick="cambiarGrosorBorde1()" id="cambiarImagen2"><img id="cambiarImagen2" class="icon" src="https://static.vecteezy.com/system/resources/thumbnails/008/561/507/small/simple-icon-modern-sign-car-silhouette-on-background-side-view-car-icon-vehicle-inspiration-editable-eps10-car-icon-isolate-on-a-white-background-illustration-free-vector.jpg" style="translate: 20px -7px; cursor: pointer;" height="90px" width="140px" alt=""></div>
+
+<div style="cursor: pointer; overflow: hidden; height: 80px; width: 180px; border: #262626 solid 1px; margin-left: 20px;" onclick="cambiarGrosorBorde2()"  id="cambiarImagen"><img id="cambiarImagen" class="icon" src="https://img.freepik.com/vector-premium/icono-frente-coche-simbolo-silueta-signo-coche-estilo-lineal_548264-627.jpg" style="translate: 20px -7px; cursor: pointer;" height="90px" width="140px" alt=""></div>
+<div style="cursor: pointer; overflow: hidden; height: 80px; width: 180px; border: #262626 solid 1px; margin-left: 20px;" onclick="cambiarGrosorBorde3()" id="cambiarImagen3"><img id="cambiarImagen3" class="icon" src="https://images.vexels.com/media/users/3/145707/isolated/preview/d3c27524358f5186c045e7f03d1f8d8e-silueta-de-vista-trasera-de-hatchback.png" style="translate: 45px 14px; cursor: pointer;" height="50px" width="80px" alt=""></div>
+<div style="cursor: pointer; overflow: hidden; height: 80px; width: 180px; border: #262626 solid 1px; margin-left: 20px;" onclick="cambiarGrosorBorde4()" id="cambiarImagen4"><img id="cambiarImagen4" class="icon" src="asiento.jpg" style="translate: 45px 14px; cursor: pointer;" height="50px" width="80px" alt=""></div>
+
+</div>
+
+<div style="margin-left: 290px;">
+    <input type="range" id="slider" name="slider" min="5" max="8" value="50" style="width: 200px; rotate: 270deg; translate: 50px 140px;">
+    <div style="translate: 70px -20px; font-size: 20px; width: 200px;">Cambios de marcha</div>
+    <div style="translate: 160px 180px; width: 100px;">5</div>
+    <div style="translate: 160px -30px; width: 100px;">8</div>
+    <button class="btndefault"  style="background-color: #262626; translate: 40px -60px; height: 50px; width: 250px;">Confirmar</button>
+   
+    </div>
+</div>
+
+<div id="flechaizq" style="font-size: 80px; font-weight: 100; translate: 260px -80px; width: 40px; cursor: pointer; z-index: 1;"><img src="flecha2.png" style="height: 40px;" alt=""></div>
+<div id="flechader" style="font-size: 80px; font-weight: 100; translate: 1360px -200px; width: 40px; cursor: pointer; z-index: 1;"><img src="flecha1.png" style="height: 40px;" alt=""></div>
+
+
+<img id="imagen" style="transform: translate(500px, -500px) scale(1.2);" src="bmw.png" alt="Imagen Verde" class="imagen-verde">
+    <div id="colores" style="display: flex;">
+        <div class="color" id="amarillo" onclick="aplicarEstilos('amarillo')" style="cursor: pointer; border: #ffffff 2px solid; height: 50px; width: 50px; border-radius: 25px; background-color: rgb(255, 149, 0); "></div>
+
+        <div class="color" id="celeste" onclick="aplicarEstilos('celeste')" style="cursor: pointer; border: #ffffff 2px solid; height: 50px; width: 50px; border-radius: 25px; background-color: rgb(147, 230, 255);"></div>
+    
+        <div class="color" id="azul" onclick="aplicarEstilos('azul')" style="cursor: pointer; border: #ffffff 2px solid; height: 50px; width: 50px; border-radius: 25px; background-color: blue;"></div>
+    
+        <div class="color" id="rojo" onclick="aplicarEstilos('rojo')" style="cursor: pointer; border: #ffffff 2px solid; height: 50px; width: 50px; border-radius: 25px; background-color: rgb(255, 158, 158);"></div>
+    
+        <div class="color" id="morado" onclick="aplicarEstilos('morado')" style="cursor: pointer; border: #ffffff 2px solid; height: 50px; width: 50px; border-radius: 25px; background-color: rgb(189, 113, 255);"></div>
+    
+
+        <div class="color" id="verde" onclick="aplicarEstilos('verde')" style=" cursor: pointer; border: #ffffff 2px solid; height: 50px; width: 50px; border-radius: 25px; background-color: green;"></div>
+       
+        <div class="color" id="gris" onclick="aplicarEstilos('gris')" style="cursor: pointer; border: #ffffff 2px solid; height: 50px; width: 50px; border-radius: 25px; background-color: rgb(145, 145, 145);"></div>
+       
+
+    </div>
+<div id="txt1" style="font-size: 30px; font-family:Verdana, Geneva, Tahoma, sans-serif; translate: 0px -630px; text-align: center;">Elija un color</div>
+
+<div style="display: flex; translate: 400px -840px; width: 800px; height: 60px;">
+<button id="btn3" class="btndefault" style=" background-color: rgb(255, 255, 255); border: 2px solid black; color: #262626;">Guardar Configuracion</button>
+<button id="btn3" class="btndefault" style="margin-left: 100px; background-color: #262626; border: 2px solid black;">Añadir al carrito</button>
+</div>
+
+</main>
+<script>
+  var botonMenu = document.getElementById('btnatraz');
+
+botonMenu.addEventListener('click', function() {
+    window.location.href = 'proyecto_integrador_catalogo.html';
+});
+ function cambiarGrosorBorde1() {
+        var div1 = document.getElementById('cambiarImagen2');
+        var div2 = document.getElementById('cambiarImagen');
+        var div3 = document.getElementById('cambiarImagen3');
+        var div4 = document.getElementById('cambiarImagen4');
+
+        var grosorActual1 = parseInt(div1.style.borderWidth);
+        var grosorActual2 = parseInt(div2.style.borderWidth);
+        var grosorActual3 = parseInt(div3.style.borderWidth);
+        var grosorActual4 = parseInt(div4.style.borderWidth);
+
+        div1.style.borderWidth = (grosorActual1 === 1) ? '2px' : '1px';
+        div2.style.borderWidth = (grosorActual2 === 1) ? '1px' : '1px';
+        div3.style.borderWidth = (grosorActual3 === 1) ? '1px' : '1px';
+        div4.style.borderWidth = (grosorActual4 === 1) ? '1px' : '1px';
+    }
+    function cambiarGrosorBorde2() {
+        var div1 = document.getElementById('cambiarImagen2');
+        var div2 = document.getElementById('cambiarImagen');
+        var div3 = document.getElementById('cambiarImagen3');
+        var div4 = document.getElementById('cambiarImagen4');
+
+        var grosorActual1 = parseInt(div1.style.borderWidth);
+        var grosorActual2 = parseInt(div2.style.borderWidth);
+        var grosorActual3 = parseInt(div3.style.borderWidth);
+        var grosorActual4 = parseInt(div4.style.borderWidth);
+
+
+        div1.style.borderWidth = (grosorActual1 === 1) ? '1px' : '1px';
+        div2.style.borderWidth = (grosorActual2 === 1) ? '2px' : '1px';
+        div3.style.borderWidth = (grosorActual3 === 1) ? '1px' : '1px';
+        div4.style.borderWidth = (grosorActual4 === 1) ? '1px' : '1px';
+    }
+    function cambiarGrosorBorde3() {
+        var div1 = document.getElementById('cambiarImagen2');
+        var div2 = document.getElementById('cambiarImagen');
+        var div3 = document.getElementById('cambiarImagen3');
+
+        var div4 = document.getElementById('cambiarImagen4');
+
+        var grosorActual1 = parseInt(div1.style.borderWidth);
+        var grosorActual2 = parseInt(div2.style.borderWidth);
+        var grosorActual3 = parseInt(div3.style.borderWidth);
+        var grosorActual4 = parseInt(div4.style.borderWidth);
+
+        div1.style.borderWidth = (grosorActual1 === 1) ? '1px' : '1px';
+        div2.style.borderWidth = (grosorActual2 === 1) ? '1px' : '1px';
+        div3.style.borderWidth = (grosorActual3 === 1) ? '2px' : '1px';
+        div4.style.borderWidth = (grosorActual4 === 1) ? '1px' : '1px';
+    }
+    function cambiarGrosorBorde4() {
+        var div1 = document.getElementById('cambiarImagen2');
+        var div2 = document.getElementById('cambiarImagen');
+        var div3 = document.getElementById('cambiarImagen3');
+        var div4 = document.getElementById('cambiarImagen4');
+
+        var grosorActual1 = parseInt(div1.style.borderWidth);
+        var grosorActual2 = parseInt(div2.style.borderWidth);
+        var grosorActual3 = parseInt(div3.style.borderWidth);
+        var grosorActual4 = parseInt(div4.style.borderWidth);
+
+        div1.style.borderWidth = (grosorActual1 === 1) ? '1px' : '1px';
+        div2.style.borderWidth = (grosorActual2 === 1) ? '1px' : '1px';
+        div3.style.borderWidth = (grosorActual3 === 1) ? '1px' : '1px';
+        div4.style.borderWidth = (grosorActual3 === 1) ? '2px' : '1px';
+    }
+
+var miImagen = document.getElementById("imagen");
+  var cambiarImagenBtn = document.getElementById("cambiarImagen");
+  var cambiarImagenBtn2 = document.getElementById("cambiarImagen2");
+  var cambiarImagenBtn3 = document.getElementById("cambiarImagen3");
+  var cambiarImagenBtn4 = document.getElementById("cambiarImagen4");
+
+  function cambiarSrcDeImagen() {
+    miImagen.src = "bmwfront.png"; 
+    miImagen.alt = "Imagen 2";
+    miImagen.style="transform: translate(500px, -500px) scale(1); height: 380px"
+    cambiarImagenBtn.style("border: 3px solid Black;")
+  }
+  function cambiarSrcDeImagen2() {
+    miImagen.src = "bmw.png"; 
+    miImagen.alt = "Imagen 2";
+    miImagen.style="transform: translate(500px, -500px) scale(1.2); height: 380px"
+  }
+  function cambiarSrcDeImagen3() {
+    miImagen.src = "bmwback.png"; 
+    miImagen.alt = "Imagen 2";
+    miImagen.style="transform: translate(500px, -500px) scale(1); height: 380px"
+  }
+  function cambiarSrcDeImagen4() {
+    miImagen.src = "https://cdn.trendhunterstatic.com/phpthumbnails/288/288911/288911_3_600.jpeg?auto=webp"; 
+    miImagen.alt = "Imagen 2";
+    miImagen.style="transform: translate(550px, -480px) scale(0.9); height: 380px"
+  }
+
+  
+
+  cambiarImagenBtn.addEventListener("click", cambiarSrcDeImagen);
+  cambiarImagenBtn2.addEventListener("click", cambiarSrcDeImagen2);
+  cambiarImagenBtn3.addEventListener("click", cambiarSrcDeImagen3);
+  cambiarImagenBtn4.addEventListener("click", cambiarSrcDeImagen4);
+
+
+
+ function aplicarEstilos(id) {
+    document.getElementById('amarillo').classList.remove('borde-negro');
+    document.getElementById('celeste').classList.remove('borde-negro');
+    document.getElementById('azul').classList.remove('borde-negro');
+    document.getElementById('rojo').classList.remove('borde-negro');
+    document.getElementById('verde').classList.remove('borde-negro');
+    document.getElementById('gris').classList.remove('borde-negro');
+    document.getElementById('morado').classList.remove('borde-negro');
+
+    var Div1 = document.getElementById('amarillo');
+           
+             var Div2 = document.getElementById('azul');
+           
+             var Div3 = document.getElementById('celeste');
+            
+             var Div4 = document.getElementById('rojo');
+           
+             var Div5 = document.getElementById('verde');
+            
+             var Div6 = document.getElementById('gris');
+            
+             var Div7 = document.getElementById('morado');
+           
+
+    switch (id) {
+        
+        case 'amarillo':
+            document.getElementById('imagen').classList.remove('filtro-celeste', 'filtro-azul', 'filtro-rojo', 'filtro-verde', 'filtro-gris','filtro-morado');
+            document.getElementById('imagen').classList.add('filtro-amarillo');
+            Div1.style.borderColor = "Black"; 
+            Div2.style.borderColor = "White"; 
+            Div3.style.borderColor = "White"; 
+            Div4.style.borderColor = "White"; 
+            Div5.style.borderColor = "White"; 
+            Div6.style.borderColor = "White"; 
+            Div7.style.borderColor = "White"; 
+           
+            break;
+        case 'celeste':
+            document.getElementById('imagen').classList.remove('filtro-amarillo', 'filtro-azul', 'filtro-rojo', 'filtro-verde', 'filtro-gris','filtro-morado');
+            document.getElementById('imagen').classList.add('filtro-celeste');
+            Div1.style.borderColor = "White"; 
+            Div2.style.borderColor = "White"; 
+            Div3.style.borderColor = "Black"; 
+            Div4.style.borderColor = "White"; 
+            Div5.style.borderColor = "White"; 
+            Div6.style.borderColor = "White"; 
+            Div7.style.borderColor = "White"; 
+            break;
+        case 'azul':
+            document.getElementById('imagen').classList.remove('filtro-amarillo', 'filtro-celeste', 'filtro-rojo', 'filtro-verde', 'filtro-gris','filtro-morado');
+            document.getElementById('imagen').classList.add('filtro-azul');
+            Div1.style.borderColor = "White"; 
+            Div2.style.borderColor = "Black"; 
+            Div3.style.borderColor = "White"; 
+            Div4.style.borderColor = "White"; 
+            Div5.style.borderColor = "White"; 
+            Div6.style.borderColor = "White"; 
+            Div7.style.borderColor = "White"; 
+            break;
+        case 'morado':
+            document.getElementById('imagen').classList.remove('filtro-amarillo', 'filtro-celeste', 'filtro-rojo', 'filtro-verde', 'filtro-gris','filtro-azul');
+            document.getElementById('imagen').classList.add('filtro-morado');
+            Div1.style.borderColor = "White"; 
+            Div2.style.borderColor = "White"; 
+            Div3.style.borderColor = "White"; 
+            Div4.style.borderColor = "White"; 
+            Div5.style.borderColor = "White"; 
+            Div6.style.borderColor = "White"; 
+            Div7.style.borderColor = "Black"; 
+            break;
+        case 'rojo':
+            document.getElementById('imagen').classList.remove('filtro-amarillo', 'filtro-celeste', 'filtro-azul', 'filtro-verde', 'filtro-gris','filtro-morado');
+            document.getElementById('imagen').classList.add('filtro-rojo');
+            Div1.style.borderColor = "White"; 
+            Div2.style.borderColor = "White"; 
+            Div3.style.borderColor = "White"; 
+            Div4.style.borderColor = "Black"; 
+            Div5.style.borderColor = "White"; 
+            Div6.style.borderColor = "White"; 
+            Div7.style.borderColor = "White"; 
+            break;
+        case 'verde':
+            document.getElementById('imagen').classList.remove('filtro-amarillo', 'filtro-celeste', 'filtro-azul', 'filtro-rojo', 'filtro-gris','filtro-morado');
+            document.getElementById('imagen').classList.add('filtro-verde');
+            Div1.style.borderColor = "White"; 
+            Div2.style.borderColor = "White"; 
+            Div3.style.borderColor = "White"; 
+            Div4.style.borderColor = "White"; 
+            Div5.style.borderColor = "Black"; 
+            Div6.style.borderColor = "White"; 
+            Div7.style.borderColor = "White"; 
+            break;
+        case 'gris':
+            document.getElementById('imagen').classList.remove('filtro-amarillo', 'filtro-celeste', 'filtro-azul', 'filtro-rojo', 'filtro-verde','filtro-morado');
+            document.getElementById('imagen').classList.add('filtro-gris');
+            Div1.style.borderColor = "White"; 
+            Div2.style.borderColor = "White"; 
+            Div3.style.borderColor = "White"; 
+            Div4.style.borderColor = "White"; 
+            Div5.style.borderColor = "White"; 
+            Div6.style.borderColor = "Black"; 
+            Div7.style.borderColor = "White"; 
+            break;
+    }
+}
+
+</script>
+</body>
+</html>

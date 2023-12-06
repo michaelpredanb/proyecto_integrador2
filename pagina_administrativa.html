@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+<style>
+  body{
+    background-image: url("https://rare-gallery.com/uploads/posts/503192-blur-cars-city.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+    
+  }
+  header{
+    background-color: #000;
+  }
+     #btn1 {
+            position: absolute;
+            top: 66%;
+            left: 25%;
+            transform: translate(-50%, -50%);
+            font-size: 140px;
+            color: white;
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        #btn2 {
+            position: absolute;
+            top: 66%;
+            left: 25%;
+            transform: translate(-80%, -100%);
+            font-size: 200px;
+            color: white;
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+      
+        .pie-pagina{
+    width: 100%;
+    background-color: black;
+    color: white;
+    margin-top: 200px;
+}
+.grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+
+}
+.box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box figure img{
+    width: 250px;
+
+
+}
+.box h2{
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.grupo-1 .box p{
+    color: white;
+    margin-bottom: 10px;
+}
+.red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    margin-right: 10px;
+    background-color: black;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.red-social a:hover{
+    color: yellowgreen;
+    font-size: 30px;
+    transition: all 1s;
+   
+}
+
+.grupo-2{
+    background-color: black;
+    padding: 15px 10px;
+    text-align: center;
+    color: white;
+}
+.grupo-2 small{
+    font-size: 15px;
+}
+@media screen and (max-width:800px){
+    .pie-pagina .grupo-1{
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 35px 0px;
+
+}
+}
+
+
+.nav-link {
+    
+    color: white;
+    transition: all 0.3s;
+}
+.nav-link:hover {
+   
+    border-bottom: 2px solid greenyellow;
+}
+.login {
+  background-color: transparent;
+  border: 2px solid darkgrey;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  height: 800px;
+  width: 450px;
+}
+.modal-content {
+  background-color: transparent;
+  
+}
+.login-container {
+            width: 300px;
+
+            margin: 0 auto;
+            text-align: center;
+            color: white;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            
+        }
+        .login-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+        .login-image {
+            max-width: 100px;
+        }
+        .login-input {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #000;
+            margin: 10px 0;
+            padding: 5px;
+            font-size: 16px;
+        }
+        .login-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 0;
+            cursor: pointer;
+            margin-top: 60px;
+          border-radius: 20px;
+        }
+        .login-button:hover {
+          scale: 1.1;
+          transition: all 0.6s;
+        }
+        .login-links {
+            margin: 10px 0;
+        }
+        .login-input{
+          border-radius: 20px;
+        }
+        .container_img{
+margin-bottom: 20px;
+        }
+        input{
+         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+         font-size: 40px;
+         font-weight: 600;
+        }
+        #btn_close{
+          background-color: transparent;
+          margin-left: 270px;
+          border: 0px;
+        }
+        .container {
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            opacity: 1;
+        }
+        th{
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: large;
+        }
+        td{
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+        }
+        #btn_registrar{
+            margin-top: 50px;
+        }
+        #btn_quitar{
+            margin-top: 50px;
+            margin-left: 100px;
+        }
+        #btn_registrar:hover{
+            scale: 1.2;
+            transition: all 1s;
+        }
+        #btn_quitar:hover{
+            scale: 1.2;
+            transition: all 1s;
+        }
+        label{
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+            border-top: 40px;
+
+        }
+        .modal-title{
+            color: white;
+        }
+        #btn_agregar{
+          scale: 1.2;  
+margin-top: 30px;
+        } 
+        #btn_quitar{
+          scale: 1.2;
+            margin-top: 30px;
+            margin-left: 50px;
+        } 
+        #btn_agregar:hover{
+            scale: 1.3;
+            transition: all 1s;
+        }
+        #btn_quitar:hover{
+            scale: 1.3;
+            transition: all 1s;
+        }
+        #btn_agregar1{
+          scale: 0.9;  
+margin-top: 30px;
+border-radius: 10px;
+        } 
+        #btn_quitar1{
+          scale: 0.9;
+            margin-top: 30px;
+  border-radius: 10px;
+            margin-left: 10px;
+        } 
+        #btn_agregar1:hover{
+            scale: 1;
+            transition: all 1s;
+        }
+        #btn_quitar1:hover{
+            scale: 1;
+            transition: all 1s;
+        }
+        #txt_h5{
+            margin-bottom: 30px;
+        }
+        .container {
+            height: 550px;
+        }
+        @media (max-width: 767px) {
+ .container{
+scale: 0.55;
+translate: -93px -100px;
+ }
+ .modal {
+    scale: 0.75;
+    margin: 0px;
+    translate: -30px;
+  width: 500px;
+ }
+ }
+  
+ .nav-link {
+    
+    color: white;
+    transition: all 0.3s;
+   margin-left: 10px;
+   width: 10%;
+}
+
+.nav-link:hover {
+   width: 100%;
+    border-bottom: 1.5px solid #9CFF4F
+}
+     
+</style>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-black amarillo">
+            <div class="container-fluid">
+                <button id="homebtn" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <img id="menuicon" src="homeicon.png"  alt="" height="30" width="50" style="background-color: transparent; translate: 0px -10px;  transition: height 0.3s ease;">
+            
+                  </button>
+              <a class="navbar-brand" href="#"><img src="logopng.png" alt="nada" height="70" width="150"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <img id="menuicon" src="personas.png" data-toggle="modal" data-target="#listaUsuariosModal"  alt="" height="30" width="50" style="background-color: transparent; translate: 0px -10px;  transition: height 0.3s ease;">
+        
+              </button>
+            
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link text-white" aria-current="page" href="index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <div class="amarillo"><a class="nav-link text-white" href="#">Descuentos</a></div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Contacto
+                    </a>
+                    <ul class="dropdown-menu text-white">
+                      <li><a class="dropdown-item text-white" href="#">Action</a></li>
+                      <li><a class="dropdown-item text-white" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider text-white"></li>
+                      <li><a class="dropdown-item text-white" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a style="width: 100%;" class="nav-link text-white"  data-toggle="modal" data-target="#listaUsuariosModal" href="#">Gestionar Usuarios</a>
+                  </li>
+                 
+                  
+                </ul>
+                <form class="d-flex" role="search">
+    
+                   
+                 
+    <button type="button" class="btn bg-transparent" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      <img src="userimg.png" alt="" height="25" width="25">
+    </button>
+    
+    
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="login">
+        <div class="modal-content">
+         
+          <div class="modal-body">
+            
+    
+            <div class="login-container">
+              <div class="buttons">
+               
+              <button type="button" class="btn btn-secondary" id="btn_close" data-bs-dismiss="modal">X</button>
+    
+            </div>
+              <div class="login-title">Gestion de usuarios</div>
+           
+            <div class="login-subtitle">Usuarios Habilitados</div>
+              <form>
+                  <label for="username">Usuario:</label>
+                  
+                  <input type="text" name="username" class="login-input" required>
+      
+                  <label for="password">Contraseña:</label>
+                  <input type="password" name="password" class="login-input" required>
+      
+                  <button type="submit" class="login-button">Iniciar Sesión</button>
+              </form>
+              <div class="login-links">
+                <label for="username">Olvidaste tu contraseña?</label>
+                  <a href="olvidar_contraseña.html">Recuperar</a><br>
+                  <label for="username">No tienes una cuenta?</label>
+                  <a href="registrarse.html">Regístrate</a>
+              </div>
+          </div>
+    
+    
+          </div>
+         
+        </div>
+      </div>
+    </div>
+    </div>             
+                </form>
+              </div>
+            </div>
+          </nav>
+      </header>
+</header>
+
+<div class="container">
+    <h1>Registro de Productos</h1>
+    <table class="table" id="productos-table">
+        <thead>
+                <tr>
+                    <th>Placa</th>
+                    <th>Modelo</th>
+                    <th>Marca</th>
+                    <th>Precio</th>
+                    <th>Descripción</th>
+                    <th>N° Propietarios</th>
+                    <th>Kilometraje</th>
+                </tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                    <td>#0001</td>
+                    <td>Aventador</td>
+                    <td>Lamborghini</td>
+                    <td>$350.000</td>
+                    <td>Descripción del Producto</td>
+                    <td>0</td>
+                    <td>0KM</td>
+                </tr>
+                <tr>
+                    <td>#0002</td>
+                    <td>Phantom</td>
+                    <td>Rolls Royce</td>
+                    <td>$250.000</td>
+                    <td>Descripción del Producto</td>
+                    <td>1</td>
+                    <td>10,000KM</td>
+                </tr>
+              
+           
+            </tbody>
+        </table>
+        <button class="btn btn-primary" id="btn_agregar" data-toggle="modal" data-target="#agregarProductoModal">Agregar Producto</button>
+        <button class="btn btn-secondary" id="btn_quitar" data-toggle="modal" data-target="#quitarProductoModal">Quitar Producto</button>
+    </div>
+
+    <div class="modal fade" id="agregarProductoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="login">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Agregar Vehículo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                 
+                    <form>
+                        <div class="form-group">
+                            <label for="titulo">Placa</label>
+                            <input type="text" class="form-control" id="placa">
+                            
+                        </div>
+                        <div class="form-group">
+                            <label for="marca">Marca</label>
+                            <input type="text" class="form-control" id="marca">
+                        </div>
+                        <div class="form-group">
+                            <label for="modelo">Modelo</label>
+                            <input type="text" class="form-control" id="modelo">
+                        </div>
+                        <div class="form-group">
+                            <label for="precio">Precio</label>
+                            <input type="text" class="form-control" id="precio">
+                        </div>
+                        <div class="form-group">
+                            <label for="descripcion">Descripcion</label>
+                            <input type="text" class="form-control" id="descripcion">
+                        </div>
+                        <div class="form-group">
+                            <label for="propietarios">N° propietarios</label>
+                            <input type="text" class="form-control" id="propietarios">
+                        </div>
+                        <div class="form-group">
+                            <label for="kilometraje">Kilometraje</label>
+                            <input type="text" class="form-control" id="Kilometraje">
+                        </div>
+                     
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" id="btnGuardarProducto">Guardar Producto </button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="modal fade" id="listaUsuariosModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="login">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Lista de Usuarios</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                
+                    <table class="table" id="usuarios_table">
+                        <thead>
+                            <tr>
+                                <th>Avatar</th>
+                                <th>Código</th>
+                                <th>Nombre</th>
+                                <th>Permisos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                     
+                           
+                            <tr>
+                                <td><img src="https://20.theladbiblegroup.com/s3/content/55e5aaf5575fbcf904312ee637cb2856.jpg" alt="Avatar Usuario 1" width="30" height="30"></td>
+                                <td>#EZ1T</td>
+                                <td>Usuario 4</td>
+                                <td>Cliente VIP</td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://png.pngtree.com/png-clipart/20191121/original/pngtree-user-icon-png-image_5097430.jpg" alt="Avatar Usuario 1" width="30" height="30"></td>
+                                <td>#A32N</td>
+                                <td>Usuario 5</td>
+                                <td>Cliente</td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://img.freepik.com/vector-premium/icono-circulo-usuario-anonimo-ilustracion-vector-estilo-plano-sombra_520826-1931.jpg" alt="Avatar Usuario 1" width="30" height="30"></td>
+                                <td>#8J7S</td>
+                                <td>Usuario 6</td>
+                                <td>Cliente</td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUYpEQFFIt6CB5p61YSnuHgns452R_tMNKotMyl0pFaq3szUGCOxkengccHHIkee0PdtM&usqp=CAU" alt="Avatar Usuario 1" width="30" height="30"></td>
+                                <td>#F10L</td>
+                                <td>Usuario 7</td>
+                                <td>Administrador</td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://20.theladbiblegroup.com/s3/content/55e5aaf5575fbcf904312ee637cb2856.jpg" alt="Avatar Usuario 1" width="30" height="30"></td>
+                                <td>#55J1</td>
+                                <td>Usuario 8</td>
+                                <td>Cliente</td>
+                            </tr>
+                        </tbody>
+                       
+                    </table>
+                    <button class="btn-primary" id="btn_agregar1" data-toggle="modal" data-target="#gestionar_usuarios_modal">Añadir Usuario</button>
+                    <button class="btn-secondary" id="btn_quitar1">Añadir Usuario</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="modal fade" id="gestionar_usuarios_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="login">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Gestión de Usuarios</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+             
+                    <h5 id="txt_h5" class="modal-title">Agregar Usuario</h5>
+                    <form>
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="form-control" id="nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="nombre">Apellido</label>
+                            <input type="text" class="form-control" id="apellido">
+                        </div>
+                        <div class="form-group">
+                            <label for="correo">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="correo">
+                        </div>
+                        <div class="form-group">
+                            <label for="correo">Permisos</label>
+                            <input type="email" class="form-control" id="correo">
+                        </div>
+                        <div class="form-group">
+                            <label for="rol">Rol</label>
+                            <select class="form-control" id="rol">
+                                <option value="usuario">Usuario</option>
+                                <option value="administrador">Administrador</option>
+                                <option value="usuario VIP">Usuario VIP</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" id="btn_guardarusuario">Guardar Usuario</button>
+                    <button type="button" class="btn btn-danger">Eliminar Usuario</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+
+
+  
+   
+
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+          <div class="box">
+            <figure>
+              <a href="#">
+                  <img src="logopng.png" alt="logo">
+              </a>
+            </figure>
+        </div>
+        <div class="box">
+          <h2> SOBRE NOSOTROS</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates exercitationem similique, consequatur laborum, expedita itaque quasi accusantium a suscipit sed molestias praesentium nostrum repellat enim necessitatibus natus voluptate quod id?</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores non sint temporibus quae placeat in vel sapiente ipsum odio reprehenderit similique, quidem fuga esse quibusdam assumenda atque nulla eveniet magni!</p>
+      
+        </div>
+        <div class="box"></div>
+        <h2>SIGUENOS</h2>
+        <div class="red-social">
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-instagram"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="#" class="fa fa-youtube"></a>
+        </div>
+       </div>
+       <div class="grupo-2">
+          <small>&copy; 2023 <b>Auto Drive</b> -  Todos los Derechos Reservados.</small>
+       </div>
+      </footer>
+
+      <script>
+
+var botonMenu = document.getElementById('homebtn');
+
+    botonMenu.addEventListener('click', function() {     window.location.href = 'index.html';
+    });
+
+
+const btnAgregar = document.getElementById("btnGuardarProducto");
+
+btnAgregar.addEventListener("click", function () {
+  
+    const table = document.getElementById("productos-table").getElementsByTagName('tbody')[0];
+
+    const newRow = table.insertRow(table.rows.length);
+
+   
+    const placa = document.getElementById("placa").value;
+    const modelo = document.getElementById("modelo").value;
+    const marca = document.getElementById("marca").value;
+    const precio = document.getElementById("precio").value;
+    const descripcion = document.getElementById("descripcion").value;
+    const propietario = document.getElementById("propietarios").value;
+   
+
+
+    const placaCell = newRow.insertCell(0);
+    const modeloCell = newRow.insertCell(1);
+    const marcaCell = newRow.insertCell(2);
+    const precioCell = newRow.insertCell(3);
+    const DescripcionCell = newRow.insertCell(4);
+    const propietarioCell = newRow.insertCell(5);
+    const KilometrajeCell = newRow.insertCell(6);
+
+    placaCell.innerHTML = "#"+placa
+    modeloCell.innerHTML = modelo
+    marcaCell.innerHTML = marca;
+
+    DescripcionCell.innerHTML = descripcion
+    precioCell.innerHTML = "$"+precio
+    KilometrajeCell.innerHTML = "0KM"
+    propietarioCell.innerHTML=propietario
+});
+const btnGuardar = document.getElementById("btn_guardarusuario");
+
+btnGuardar.addEventListener("click", function ()
+{
+    const table = document.getElementById("usuarios_table").getElementsByTagName('tbody')[0];
+
+const newRow = table.insertRow(table.rows.length);
+
+const nombre = document.getElementById("nombre").value
+const apellido=document.getElementById("apellido").value
+const permisos= document.getElementById("rol").value
+const AvatarCell = newRow.insertCell(0);
+    const CodigoCell = newRow.insertCell(1);
+    const NombreCell = newRow.insertCell(2);
+    const PermisosCell = newRow.insertCell(3);
+   
+    
+    AvatarCell.innerHTML="<img src=https://png.pngtree.com/png-clipart/20191121/original/pngtree-user-icon-png-image_5097430.jpg alt=Avatar Usuario 1 width=30 height=30 </img>"
+    CodigoCell.innerHTML="#"+generarCodigoAleatorio()
+    NombreCell.innerHTML=nombre+" "+apellido
+    PermisosCell.innerHTML=permisos
+
+})
+
+function generarCodigoAleatorio() {
+  const caracteres = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  let codigo = '';
+
+  for (let i = 0; i < 4; i++) {
+    const indice = Math.floor(Math.random() * caracteres.length);
+    codigo += caracteres.charAt(indice);
+  }
+
+  return codigo;
+}
+
+
+        </script>
+        
+    
+</body>
+
+</html>
